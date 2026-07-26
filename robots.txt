@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Archivo de contexto para agentes de IA
+# https://www.celius.cl/llms.txt
+
 Sitemap: https://www.celius.cl/sitemap.xml

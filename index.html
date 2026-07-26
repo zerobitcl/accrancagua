@@ -15,6 +15,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/favicon-32.png">
+  <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://www.celius.cl/llms.txt">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CL">
   <meta property="og:site_name" content="ACC Climatización">
@@ -947,11 +948,23 @@
         "@id": "https://www.celius.cl/#business",
         "name": "ACC Climatización",
         "alternateName": ["ACC Rancagua", "Celius"],
-        "description": "Empresa de instalación, mantención y reparación de aire acondicionado y climatización en la Región de O'Higgins.",
+        "description": "ACC Climatización instala, mantiene y repara aire acondicionado Inverter en Rancagua, Machalí, Graneros y Olivar. Técnicos con acreditación SEC vigente, refrigerantes ecológicos R410A / R32, fijaciones antivibración de norma industrial y hasta 40% de ahorro energético verificado mediante cálculo térmico de frigorías por m³.",
         "url": "https://www.celius.cl/",
         "telephone": "+56926225041",
         "image": "https://www.celius.cl/og-image.jpg",
+        "logo": "https://www.celius.cl/og-image.jpg",
         "priceRange": "$$",
+        "currenciesAccepted": "CLP",
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+        "knowsAbout": [
+          "Instalación de aire acondicionado Inverter",
+          "Mantención preventiva de climatización",
+          "Reparación y recarga de gas refrigerante",
+          "Refrigerante R410A",
+          "Refrigerante R32",
+          "Cálculo térmico de frigorías",
+          "Acreditación SEC Chile"
+        ],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Rancagua",
@@ -972,6 +985,15 @@
             "closes": "19:00"
           }
         ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de climatización ACC",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@id": "https://www.celius.cl/#instalacion" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://www.celius.cl/#mantencion" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://www.celius.cl/#reparacion" } }
+          ]
+        },
         "areaServed": [
           {
             "@type": "City",
@@ -1027,14 +1049,22 @@
           }
         ],
         "sameAs": [
-          "https://wa.me/56926225041"
-        ]
+          "https://wa.me/56926225041",
+          "https://www.celius.cl/llms.txt"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+56926225041",
+          "contactType": "customer service",
+          "areaServed": "CL",
+          "availableLanguage": ["es-CL", "es"]
+        }
       },
       {
         "@type": "Service",
         "@id": "https://www.celius.cl/#instalacion",
         "name": "Instalación de Equipos Inverter",
-        "serviceType": "Instalación de aire acondicionado",
+        "serviceType": "Instalación de aire acondicionado Inverter",
         "provider": { "@id": "https://www.celius.cl/#business" },
         "areaServed": [
           { "@type": "City", "name": "Rancagua" },
@@ -1042,7 +1072,7 @@
           { "@type": "City", "name": "Graneros" },
           { "@type": "City", "name": "Olivar" }
         ],
-        "description": "Instalación profesional de equipos split inverter en hogares y comercios de la Región de O'Higgins."
+        "description": "Instalación de splits Inverter con vacío de línea, refrigerantes R410A / R32, fijaciones antivibración y técnicos SEC. Hasta 40% de ahorro energético verificado con cálculo térmico de frigorías por m³."
       },
       {
         "@type": "Service",
@@ -1056,7 +1086,7 @@
           { "@type": "City", "name": "Graneros" },
           { "@type": "City", "name": "Olivar" }
         ],
-        "description": "Limpieza profunda, revisión de gas refrigerante y optimización del rendimiento energético."
+        "description": "Mantención preventiva cada 6–12 meses: limpieza de filtros/evaporador, medición de presión R410A / R32, ΔT y amperaje para recuperar hasta 20% de eficiencia en equipos saturados."
       },
       {
         "@type": "Service",
@@ -1070,7 +1100,7 @@
           { "@type": "City", "name": "Graneros" },
           { "@type": "City", "name": "Olivar" }
         ],
-        "description": "Diagnóstico, reparación y recarga de gas refrigerante con garantía de servicio."
+        "description": "Diagnóstico en menos de 60 minutos, reparación y recarga certificada de refrigerantes ecológicos R410A / R32 con prueba de fugas y garantía técnica escrita."
       }
     ]
   }
@@ -1131,62 +1161,62 @@
       <div class="wrap">
         <div class="section-head reveal">
           <span class="eyebrow">Servicios clave</span>
-          <p>Tres soluciones claras para hogares y comercios en Rancagua y alrededores. Cotiza en minutos y agenda sin vueltas.</p>
+          <p>Tres servicios técnicos medibles para hogares y comercios en Rancagua, Machalí, Graneros y Olivar: instalación Inverter, mantención preventiva y reparación con refrigerantes R410A / R32.</p>
         </div>
 
         <article class="service-block reveal" id="instalacion">
           <h2>Instalación de Equipos Inverter</h2>
-          <p>Montamos tu split inverter con terminación limpia, vacío de línea y puesta en marcha el mismo día de la visita. Menos consumo, más confort.</p>
+          <p>Instalamos splits Inverter con vacío de línea a ≤500 micrones, prueba de estanqueidad, refrigerantes ecológicos R410A / R32 y fijaciones antivibración de norma industrial. Puesta en marcha el mismo día de la visita técnica.</p>
           <div class="benefit-grid">
             <article>
-              <h3>Instalación prolija y segura</h3>
-              <p>Canaletas, drenaje y fijación a medida. Tu equipo queda listo para trabajar sin ruidos ni fugas.</p>
+              <h3>Instalación certificada SEC</h3>
+              <p>Técnicos con acreditación SEC vigente: canaletas, drenaje con pendiente controlada y anclaje antivibración para operar sin ruidos ni microfugas.</p>
             </article>
             <article>
-              <h3>Ahorro energético real</h3>
-              <p>Te orientamos en la capacidad BTU correcta para que enfríe (o caliente) sin gastar de más.</p>
+              <h3>Hasta 40% de ahorro energético verificado</h3>
+              <p>Cálculo térmico de frigorías por m³ y tecnología Inverter de alta eficiencia para dimensionar BTU reales y reducir el consumo eléctrico medible.</p>
             </article>
             <article>
-              <h3>Listo el mismo día</h3>
-              <p>Agenda por WhatsApp, confirmamos horario y dejamos el equipo funcionando ante ti.</p>
+              <h3>Puesta en marcha en 1 visita</h3>
+              <p>Agenda por WhatsApp, confirmamos horario y entregamos el equipo operando con registro de presión y temperatura de descarga.</p>
             </article>
           </div>
         </article>
 
         <article class="service-block reveal" id="mantencion">
           <h2>Mantención Preventiva</h2>
-          <p>Recupera el caudal de aire, baja el consumo y evita que tu equipo falle en la ola de calor. Ideal antes de cada temporada.</p>
+          <p>Protocolo de mantención cada 6–12 meses: recupera caudal de aire, baja consumo hasta un 20% en equipos saturados y reduce fallas en temporada alta (noviembre–marzo en O'Higgins).</p>
           <div class="benefit-grid">
             <article>
-              <h3>Limpieza profunda</h3>
-              <p>Filtros, evaporador y drenaje: más aire limpio y menos olores en tu casa u oficina.</p>
+              <h3>Limpieza profunda certificada</h3>
+              <p>Filtros, evaporador, condensador y drenaje: elimina biofilm y olores, recupera intercambio térmico y mejora la calidad del aire interior.</p>
             </article>
             <article>
-              <h3>Chequeo de rendimiento</h3>
-              <p>Revisamos presión, temperatura y consumo para detectar fallas antes de que te dejen sin clima.</p>
+              <h3>Chequeo de rendimiento medible</h3>
+              <p>Medimos presión de R410A / R32, ΔT de evaporación y amperaje de compresor para detectar fallas antes de la ola de calor.</p>
             </article>
             <article>
-              <h3>Mantención a domicilio</h3>
-              <p>Vamos a Rancagua y comunas cercanas. Cotiza y agenda tu visita técnica por WhatsApp.</p>
+              <h3>Mantención a domicilio en 4 comunas</h3>
+              <p>Cobertura técnica en Rancagua, Machalí, Graneros y Olivar. Cotiza y agenda tu visita con instaladores SEC por WhatsApp.</p>
             </article>
           </div>
         </article>
 
         <article class="service-block reveal" id="reparacion">
           <h2>Reparación y Recarga de Gas</h2>
-          <p>¿No enfría, hace ruido o tira error? Diagnosticamos en terreno, reparamos la falla y recargamos gas refrigerante con medición de presión.</p>
+          <p>Diagnóstico en terreno, reparación de fallas eléctricas/mecánicas y recarga de refrigerante ecológico R410A o R32 con manómetro digital y prueba de fugas incluida.</p>
           <div class="benefit-grid">
             <article>
-              <h3>Diagnóstico sin sorpresas</h3>
-              <p>Te explicamos la falla y el costo antes de tocar el equipo. Cotización clara por WhatsApp.</p>
+              <h3>Diagnóstico en menos de 60 minutos</h3>
+              <p>Identificamos la falla y el costo antes de intervenir. Cotización clara por WhatsApp, sin letra chica.</p>
             </article>
             <article>
-              <h3>Recarga de gas certificada</h3>
-              <p>Carga correcta según fabricante, con prueba de fugas incluida para que el frío dure.</p>
+              <h3>Recarga R410A / R32 certificada</h3>
+              <p>Carga por peso según placa del fabricante, vacío previo y prueba de fugas con nitrógeno seco para estabilidad térmica durable.</p>
             </article>
             <article>
-              <h3>Urgencias prioritarias</h3>
-              <p>Atención rápida en olas de calor para hogares y locales que no pueden esperar.</p>
+              <h3>Urgencias en olas de calor</h3>
+              <p>Prioridad para hogares y comercios en Rancagua y alrededores cuando la temperatura supera 32 °C y el equipo no enfría.</p>
             </article>
           </div>
         </article>
@@ -1232,26 +1262,26 @@
       <div class="wrap">
         <div class="section-head reveal">
           <span class="eyebrow">Prueba social y garantía</span>
-          <h2>Instaladores Certificados con Garantía Técnica en la Región de O'Higgins</h2>
-          <p>Trabajo respaldado por escrito: instalación, mantención y reparación con instaladores certificados. Tu tranquilidad queda documentada, no en promesas.</p>
+          <h2>Técnicos SEC con garantía técnica escrita en la Región de O'Higgins</h2>
+          <p>ACC Climatización opera con instaladores de acreditación SEC vigente, refrigerantes ecológicos R410A / R32 y fijaciones antivibración de norma industrial. Cada servicio incluye garantía técnica documentada.</p>
         </div>
         <ol class="steps reveal">
           <li>
             <div>
-              <strong>Escribes por WhatsApp</strong>
-              <p>Cuéntanos comuna, servicio y urgencia. Te respondemos con disponibilidad real.</p>
+              <strong>Contacto por WhatsApp (&lt;15 min)</strong>
+              <p>Indica comuna (Rancagua, Machalí, Graneros u Olivar), servicio y urgencia. Respuesta con disponibilidad real del día.</p>
             </div>
           </li>
           <li>
             <div>
-              <strong>Recibes cotización clara</strong>
-              <p>Precio, plazo y alcance sin letra chica. Decides con información completa.</p>
+              <strong>Cotización técnica en 24 h</strong>
+              <p>Precio, plazo, alcance y tipo de refrigerante (R410A / R32) sin letra chica. Decides con datos duros.</p>
             </div>
           </li>
           <li>
             <div>
-              <strong>Agendamos e instalamos</strong>
-              <p>Técnico certificado en terreno, prueba de funcionamiento y garantía técnica incluida.</p>
+              <strong>Instalación o reparación certificada</strong>
+              <p>Técnico SEC en terreno, prueba de presión/temperatura, fijaciones antivibración y garantía técnica escrita al cierre.</p>
             </div>
           </li>
         </ol>
@@ -1280,18 +1310,18 @@
           <div class="form-row two">
             <div class="field">
               <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" autocomplete="name" required maxlength="80" placeholder="Tu nombre">
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required maxlength="80" placeholder="Ej: María González" enterkeyhint="next">
             </div>
             <div class="field">
               <label for="telefono">Teléfono / WhatsApp</label>
-              <input type="tel" id="telefono" name="telefono" autocomplete="tel" required maxlength="20" placeholder="+56 9 …" inputmode="tel">
+              <input type="tel" id="telefono" name="telefono" autocomplete="tel" required maxlength="20" placeholder="+56 9 1234 5678" inputmode="tel" enterkeyhint="next">
             </div>
           </div>
           <div class="form-row two">
             <div class="field">
               <label for="comuna">Comuna</label>
-              <select id="comuna" name="comuna" required>
-                <option value="">Selecciona</option>
+              <select id="comuna" name="comuna" required autocomplete="address-level2" aria-required="true">
+                <option value="" disabled selected>Selecciona tu comuna</option>
                 <option value="Rancagua">Rancagua</option>
                 <option value="Machalí">Machalí</option>
                 <option value="Graneros">Graneros</option>
@@ -1301,8 +1331,8 @@
             </div>
             <div class="field">
               <label for="servicio">Servicio</label>
-              <select id="servicio" name="servicio" required>
-                <option value="">Selecciona</option>
+              <select id="servicio" name="servicio" required autocomplete="off" aria-required="true">
+                <option value="" disabled selected>Selecciona el servicio</option>
                 <option value="Instalación de Equipos Inverter">Instalación de Equipos Inverter</option>
                 <option value="Mantención Preventiva">Mantención Preventiva</option>
                 <option value="Reparación y Recarga de Gas">Reparación y Recarga de Gas</option>
@@ -1312,7 +1342,7 @@
           <div class="form-row">
             <div class="field">
               <label for="mensaje">Detalle (opcional)</label>
-              <textarea id="mensaje" name="mensaje" maxlength="500" placeholder="Ej: inverter 12000 BTU, living 25 m², urgencia esta semana…"></textarea>
+              <textarea id="mensaje" name="mensaje" maxlength="500" autocomplete="off" placeholder="Ej: Inverter 12.000 BTU, living 25 m², refrigerante R32, urgencia esta semana…"></textarea>
             </div>
           </div>
           <button class="btn btn-primary" type="submit" style="width:100%">Cotizar Instalación por WhatsApp</button>
@@ -1344,7 +1374,7 @@
     </div>
   </footer>
 
-  <a class="wa-float" href="#" data-wa aria-label="Agendar visita técnica por WhatsApp" data-wa-msg="Hola ACC, quiero agendar una visita técnica.">
+  <a class="wa-float" href="#" data-wa rel="noopener noreferrer" aria-label="Contactar a ACC Climatización por WhatsApp" data-wa-msg="Hola ACC, quiero agendar una visita técnica.">
     <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
