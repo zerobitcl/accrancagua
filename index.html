@@ -15,6 +15,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/favicon-32.png">
+  <link rel="preload" as="image" href="/images/hero-instalacion-exterior.jpg" fetchpriority="high">
   <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://www.celius.cl/llms.txt">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CL">
@@ -305,38 +306,35 @@
       overflow: hidden;
     }
 
-    .hero-bg {
+    .hero-visual {
       position: absolute;
       inset: 0;
       z-index: -2;
-      background:
-        radial-gradient(ellipse 90% 70% at 80% 20%, rgba(46, 196, 182, 0.35), transparent 55%),
-        radial-gradient(ellipse 70% 60% at 10% 90%, rgba(19, 102, 122, 0.55), transparent 50%),
-        linear-gradient(165deg, #072a33 0%, #0b3d4a 42%, #13667a 100%);
+      overflow: hidden;
     }
 
-    .hero-visual {
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 72% center;
+      transform: scale(1.04);
+      animation: hero-ken 22s var(--ease) infinite alternate;
+    }
+
+    .hero-bg {
       position: absolute;
       inset: 0;
       z-index: -1;
       pointer-events: none;
-      overflow: hidden;
+      background:
+        linear-gradient(105deg, rgba(7, 42, 51, 0.92) 0%, rgba(11, 61, 74, 0.78) 42%, rgba(11, 61, 74, 0.45) 72%, rgba(19, 102, 122, 0.28) 100%),
+        linear-gradient(0deg, rgba(7, 42, 51, 0.72) 0%, transparent 42%);
     }
 
-    .hero-visual svg {
-      position: absolute;
-      width: 140%;
-      max-width: none;
-      height: auto;
-      right: -20%;
-      bottom: -8%;
-      opacity: 0.22;
-      animation: drift 18s ease-in-out infinite alternate;
-    }
-
-    @keyframes drift {
-      from { transform: translate3d(0, 0, 0) scale(1); }
-      to { transform: translate3d(-4%, -2%, 0) scale(1.04); }
+    @keyframes hero-ken {
+      from { transform: scale(1.04) translate3d(0, 0, 0); }
+      to { transform: scale(1.1) translate3d(-1.5%, -1%, 0); }
     }
 
     .hero-content {
@@ -447,6 +445,18 @@
     }
 
     .services { background: #fff; }
+
+    .services-visual {
+      margin: 0 0 2.75rem;
+      overflow: hidden;
+    }
+
+    .services-visual img {
+      width: 100%;
+      height: clamp(14rem, 42vw, 26rem);
+      object-fit: cover;
+      object-position: center 28%;
+    }
 
     .service-block {
       padding: 1.75rem 0;
@@ -847,11 +857,18 @@
         font-size: 1.125rem;
       }
 
-      .hero-visual svg {
-        width: 78%;
-        right: -5%;
-        bottom: 5%;
-        opacity: 0.28;
+      .hero-visual img {
+        object-position: 68% center;
+      }
+
+      .services-visual {
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        width: 100vw;
+      }
+
+      .services-visual img {
+        height: clamp(20rem, 36vw, 28rem);
       }
 
       .benefit-grid {
@@ -904,12 +921,16 @@
       .brand-hero,
       .hero-lead,
       .hero-actions,
-      .hero-visual svg,
+      .hero-visual img,
       .pin,
       .reveal {
         animation: none !important;
         transition: none !important;
         opacity: 1;
+        transform: none;
+      }
+
+      .hero-visual img {
         transform: none;
       }
     }
@@ -938,9 +959,9 @@
         "inLanguage": "es-CL",
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "url": "https://www.celius.cl/og-image.jpg",
-          "width": 1200,
-          "height": 630
+          "url": "https://www.celius.cl/images/hero-instalacion-exterior.jpg",
+          "width": 1536,
+          "height": 1024
         }
       },
       {
@@ -951,7 +972,11 @@
         "description": "ACC Climatización instala, mantiene y repara aire acondicionado Inverter en Rancagua, Machalí, Graneros y Olivar. Técnicos con acreditación SEC vigente, refrigerantes ecológicos R410A / R32, fijaciones antivibración de norma industrial y hasta 40% de ahorro energético verificado mediante cálculo térmico de frigorías por m³.",
         "url": "https://www.celius.cl/",
         "telephone": "+56926225041",
-        "image": "https://www.celius.cl/og-image.jpg",
+        "image": [
+          "https://www.celius.cl/images/hero-instalacion-exterior.jpg",
+          "https://www.celius.cl/images/servicios-unidad-interior.jpg",
+          "https://www.celius.cl/og-image.jpg"
+        ],
         "logo": "https://www.celius.cl/og-image.jpg",
         "priceRange": "$$",
         "currenciesAccepted": "CLP",
@@ -1130,22 +1155,17 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-visual" aria-hidden="true">
-        <svg viewBox="0 0 800 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
-          <title>Flujo de aire acondicionado</title>
-          <path d="M80 260c120-140 220-140 340 0s220 140 340 0" stroke="#5EEAD4" stroke-width="2" opacity="0.9"/>
-          <path d="M60 300c130-120 240-120 360 0s240 120 360 0" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
-          <path d="M100 220c110-100 200-100 310 0s200 100 310 0" stroke="#2EC4B6" stroke-width="3" opacity="0.7"/>
-          <rect x="520" y="120" width="180" height="110" rx="8" stroke="#fff" stroke-width="2" opacity="0.55"/>
-          <rect x="540" y="145" width="140" height="12" rx="2" fill="#5EEAD4" opacity="0.45"/>
-          <rect x="540" y="170" width="100" height="8" rx="2" fill="#fff" opacity="0.35"/>
-          <rect x="540" y="190" width="120" height="8" rx="2" fill="#fff" opacity="0.25"/>
-          <circle cx="200" cy="340" r="48" stroke="#5EEAD4" stroke-width="2" opacity="0.4"/>
-          <circle cx="200" cy="340" r="28" stroke="#fff" stroke-width="1.5" opacity="0.35"/>
-          <path d="M200 292v96M152 340h96" stroke="#2EC4B6" stroke-width="2" opacity="0.5"/>
-        </svg>
+      <div class="hero-visual">
+        <img
+          src="/images/hero-instalacion-exterior.jpg"
+          alt="Técnico ACC instalando unidad exterior de aire acondicionado en Rancagua"
+          width="1536"
+          height="1024"
+          fetchpriority="high"
+          decoding="async"
+        >
       </div>
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-content">
         <p class="brand-hero">ACC<span>Rancagua · O'Higgins</span></p>
         <h1 id="hero-heading">Instalación y Mantención de Aire Acondicionado en Rancagua</h1>
@@ -1163,6 +1183,17 @@
           <span class="eyebrow">Servicios clave</span>
           <p>Tres servicios técnicos medibles para hogares y comercios en Rancagua, Machalí, Graneros y Olivar: instalación Inverter, mantención preventiva y reparación con refrigerantes R410A / R32.</p>
         </div>
+
+        <figure class="services-visual reveal">
+          <img
+            src="/images/servicios-unidad-interior.jpg"
+            alt="Equipo split Inverter instalado en living de vivienda en la Región de O'Higgins"
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
 
         <article class="service-block reveal" id="instalacion">
           <h2>Instalación de Equipos Inverter</h2>
