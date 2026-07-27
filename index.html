@@ -534,49 +534,18 @@
 
     .coverage-map {
       margin-top: 2.5rem;
-      aspect-ratio: 16 / 9;
-      border-radius: var(--radius);
-      background:
-        radial-gradient(circle at 42% 48%, rgba(46, 196, 182, 0.35), transparent 28%),
-        radial-gradient(circle at 55% 40%, rgba(19, 102, 122, 0.25), transparent 22%),
-        radial-gradient(circle at 48% 62%, rgba(11, 61, 74, 0.2), transparent 20%),
-        linear-gradient(145deg, #d5e6ea, #b8ced4);
-      position: relative;
       overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid rgba(11, 61, 74, 0.1);
+      background: #d7e7eb;
     }
 
-    .coverage-map .pin {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--brand);
-      box-shadow: 0 0 0 6px rgba(46, 196, 182, 0.35);
-      animation: pulse-pin 2.4s ease-out infinite;
-    }
-
-    .pin-rancagua { top: 48%; left: 42%; }
-    .pin-machali { top: 40%; left: 55%; animation-delay: 0.4s; }
-    .pin-graneros { top: 62%; left: 38%; animation-delay: 0.8s; }
-    .pin-olivar { top: 58%; left: 52%; animation-delay: 1.2s; }
-
-    @keyframes pulse-pin {
-      0% { box-shadow: 0 0 0 0 rgba(46, 196, 182, 0.55); }
-      70% { box-shadow: 0 0 0 12px rgba(46, 196, 182, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(46, 196, 182, 0); }
-    }
-
-    .map-label {
-      position: absolute;
-      bottom: 1rem;
-      left: 1rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--brand);
-      background: rgba(244, 248, 249, 0.9);
-      padding: 0.4rem 0.65rem;
+    .coverage-map img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      object-position: center;
     }
 
     .trust {
@@ -893,7 +862,6 @@
       .hero-lead,
       .hero-actions,
       .hero-visual img,
-      .pin,
       .reveal {
         animation: none !important;
         transition: none !important;
@@ -946,6 +914,7 @@
         "image": [
           "https://www.celius.cl/images/hero-instalacion-exterior.jpg",
           "https://www.celius.cl/images/servicios-unidad-interior.jpg",
+          "https://www.celius.cl/images/cobertura-ohiggins.jpg",
           "https://www.celius.cl/og-image.jpg"
         ],
         "logo": "https://www.celius.cl/og-image.jpg",
@@ -1230,7 +1199,8 @@
       <div class="wrap">
         <div class="section-head coverage-intro reveal">
           <span class="eyebrow">Cobertura local</span>
-          <p>Servicio técnico en las comunas clave de O'Higgins. Elige tu zona y agenda por WhatsApp.</p>
+          <h2>Atendemos Rancagua y comunas cercanas</h2>
+          <p>Servicio técnico en las zonas clave de O'Higgins. Elige tu comuna y escribe por WhatsApp.</p>
         </div>
 
         <div class="coverage-grid">
@@ -1251,13 +1221,16 @@
           </article>
         </div>
 
-        <div class="coverage-map reveal" role="img" aria-label="Mapa esquemático de cobertura: Rancagua, Machalí, Graneros y Olivar">
-          <span class="pin pin-rancagua" title="Rancagua"></span>
-          <span class="pin pin-machali" title="Machalí"></span>
-          <span class="pin pin-graneros" title="Graneros"></span>
-          <span class="pin pin-olivar" title="Olivar"></span>
-          <span class="map-label">Cobertura O'Higgins</span>
-        </div>
+        <figure class="coverage-map reveal">
+          <img
+            src="/images/cobertura-ohiggins.jpg"
+            alt="Mapa de cobertura ACC: aire acondicionado en Rancagua, Machalí, Graneros y Olivar, Región de O'Higgins"
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
       </div>
     </section>
 
