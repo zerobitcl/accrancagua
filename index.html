@@ -642,7 +642,8 @@
 
     .lead-grid {
       display: grid;
-      gap: 2rem;
+      gap: 1.5rem;
+      align-items: center;
     }
 
     .lead-copy p {
@@ -651,78 +652,37 @@
       max-width: 40ch;
     }
 
-    .lead-form {
+    .contact-card {
       background: #fff;
       padding: 1.5rem;
       border: 1px solid rgba(11, 61, 74, 0.1);
       box-shadow: var(--shadow-soft);
     }
 
-    .form-row {
-      display: grid;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .field label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--ink-soft);
+    .contact-card h3 {
       margin-bottom: 0.35rem;
-    }
-
-    .field input,
-    .field select,
-    .field textarea {
-      width: 100%;
-      min-height: 48px;
-      padding: 0.65rem 0.85rem;
-      border: 1px solid rgba(11, 61, 74, 0.18);
-      border-radius: var(--radius);
-      background: var(--paper);
-      color: var(--ink);
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .field textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      outline: none;
-      border-color: var(--brand-mid);
-      box-shadow: 0 0 0 3px rgba(19, 102, 122, 0.15);
-    }
-
-    .form-note {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin: 0.75rem 0 0;
-    }
-
-    .form-feedback {
-      display: none;
-      margin-top: 1rem;
-      padding: 0.85rem 1rem;
-      border-radius: var(--radius);
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .form-feedback.is-visible { display: block; }
-
-    .form-feedback.is-success {
-      background: rgba(46, 196, 182, 0.15);
       color: var(--brand);
     }
 
-    .form-feedback.is-error {
-      background: rgba(232, 93, 4, 0.12);
-      color: #9a3412;
+    .contact-card > p {
+      color: var(--muted);
+      margin-bottom: 1.15rem;
+    }
+
+    .contact-options {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .contact-options .btn {
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .contact-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 1rem;
     }
 
     .site-footer {
@@ -766,14 +726,16 @@
       z-index: 50;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.55rem;
-      min-height: 56px;
-      padding: 0.75rem 1.1rem 0.75rem 0.85rem;
+      width: 56px;
+      height: 56px;
+      padding: 0;
       background: #25d366;
       color: #fff;
       font-weight: 700;
       font-size: 0.95rem;
-      border-radius: 999px;
+      border-radius: 16px;
       box-shadow: 0 8px 28px rgba(18, 140, 126, 0.45);
       transition: transform 0.25s var(--ease), box-shadow 0.25s ease;
       opacity: 1;
@@ -893,13 +855,17 @@
 
       .lead-grid {
         grid-template-columns: 1fr 1.15fr;
-        align-items: start;
         gap: 3rem;
       }
 
-      .lead-form { padding: 2rem; }
+      .contact-card { padding: 2rem; }
 
-      .form-row.two { grid-template-columns: 1fr 1fr; }
+      .contact-options { grid-template-columns: repeat(3, 1fr); }
+
+      .contact-options .btn {
+        justify-content: center;
+        padding-inline: 0.8rem;
+      }
 
       .footer-grid {
         grid-template-columns: 1.4fr 1fr;
@@ -911,6 +877,11 @@
       .wa-float {
         right: 1.5rem;
         bottom: 1.5rem;
+        width: auto;
+        height: auto;
+        min-height: 56px;
+        padding: 0.75rem 1.1rem 0.75rem 0.85rem;
+        border-radius: 999px;
       }
 
       .site-footer { padding-bottom: 3.5rem; }
@@ -1149,7 +1120,7 @@
           <li><a href="#cotizar">Cotizar</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary header-cta" href="#" data-wa-fallback>Cotizar por WhatsApp</a>
+      <a class="btn btn-primary header-cta" href="#" data-wa-fallback>Hablar con un técnico</a>
     </div>
   </header>
 
@@ -1169,10 +1140,10 @@
       <div class="hero-content">
         <p class="brand-hero">ACC<span>Rancagua · O'Higgins</span></p>
         <h1 id="hero-heading">Instalación y Mantención de Aire Acondicionado en Rancagua</h1>
-        <p class="hero-lead">Respuesta rápida por WhatsApp y equipos de bajo consumo: frío o calor cuando lo necesitas, sin inflar tu cuenta de luz.</p>
+        <p class="hero-lead">Cotiza directo con un técnico local. Instalación, mantención y reparación en Rancagua y alrededores.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#" id="cta-hero-wa" data-wa data-wa-msg="Hola ACC, quiero cotizar instalación de aire acondicionado en Rancagua.">Cotizar Instalación por WhatsApp</a>
-          <a class="btn btn-ghost" href="#" data-wa data-wa-msg="Hola ACC, quiero agendar una visita técnica en Rancagua.">Agendar Visita Técnica</a>
+          <a class="btn btn-primary" href="#" id="cta-hero-wa" data-wa data-wa-msg="Hola ACC, necesito ayuda con un aire acondicionado en Rancagua.">Hablar con un técnico</a>
+          <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
         </div>
       </div>
     </section>
@@ -1181,7 +1152,8 @@
       <div class="wrap">
         <div class="section-head reveal">
           <span class="eyebrow">Servicios clave</span>
-          <p>Tres servicios técnicos medibles para hogares y comercios en Rancagua, Machalí, Graneros y Olivar: instalación Inverter, mantención preventiva y reparación con refrigerantes R410A / R32.</p>
+          <h2>¿Qué necesita tu aire acondicionado?</h2>
+          <p>Servicio para hogares y comercios en Rancagua, Machalí, Graneros y Olivar.</p>
         </div>
 
         <figure class="services-visual reveal">
@@ -1197,57 +1169,57 @@
 
         <article class="service-block reveal" id="instalacion">
           <h2>Instalación de Equipos Inverter</h2>
-          <p>Instalamos splits Inverter con vacío de línea a ≤500 micrones, prueba de estanqueidad, refrigerantes ecológicos R410A / R32 y fijaciones antivibración de norma industrial. Puesta en marcha el mismo día de la visita técnica.</p>
+          <p>Instalación limpia y segura, dimensionada para el espacio y el consumo real de tu hogar o negocio.</p>
           <div class="benefit-grid">
             <article>
-              <h3>Instalación certificada SEC</h3>
-              <p>Técnicos con acreditación SEC vigente: canaletas, drenaje con pendiente controlada y anclaje antivibración para operar sin ruidos ni microfugas.</p>
+              <h3>Trabajo certificado</h3>
+              <p>Montaje, drenaje y conexiones ejecutados por técnicos especializados.</p>
             </article>
             <article>
-              <h3>Hasta 40% de ahorro energético verificado</h3>
-              <p>Cálculo térmico de frigorías por m³ y tecnología Inverter de alta eficiencia para dimensionar BTU reales y reducir el consumo eléctrico medible.</p>
+              <h3>Equipo bien dimensionado</h3>
+              <p>Calculamos los BTU adecuados para evitar consumo y desgaste innecesarios.</p>
             </article>
             <article>
-              <h3>Puesta en marcha en 1 visita</h3>
-              <p>Agenda por WhatsApp, confirmamos horario y entregamos el equipo operando con registro de presión y temperatura de descarga.</p>
+              <h3>Terminación cuidada</h3>
+              <p>Canaletas, fijaciones y pruebas finales incluidas en la instalación.</p>
             </article>
           </div>
         </article>
 
         <article class="service-block reveal" id="mantencion">
           <h2>Mantención Preventiva</h2>
-          <p>Protocolo de mantención cada 6–12 meses: recupera caudal de aire, baja consumo hasta un 20% en equipos saturados y reduce fallas en temporada alta (noviembre–marzo en O'Higgins).</p>
+          <p>Limpieza y revisión para recuperar el rendimiento, eliminar olores y prevenir fallas en temporada alta.</p>
           <div class="benefit-grid">
             <article>
-              <h3>Limpieza profunda certificada</h3>
-              <p>Filtros, evaporador, condensador y drenaje: elimina biofilm y olores, recupera intercambio térmico y mejora la calidad del aire interior.</p>
+              <h3>Limpieza profunda</h3>
+              <p>Filtros, evaporador, condensador y drenaje.</p>
             </article>
             <article>
-              <h3>Chequeo de rendimiento medible</h3>
-              <p>Medimos presión de R410A / R32, ΔT de evaporación y amperaje de compresor para detectar fallas antes de la ola de calor.</p>
+              <h3>Chequeo de rendimiento</h3>
+              <p>Revisamos temperatura, presión y consumo del equipo.</p>
             </article>
             <article>
-              <h3>Mantención a domicilio en 4 comunas</h3>
-              <p>Cobertura técnica en Rancagua, Machalí, Graneros y Olivar. Cotiza y agenda tu visita con instaladores SEC por WhatsApp.</p>
+              <h3>Atención a domicilio</h3>
+              <p>Coordinación rápida por WhatsApp en cuatro comunas.</p>
             </article>
           </div>
         </article>
 
         <article class="service-block reveal" id="reparacion">
           <h2>Reparación y Recarga de Gas</h2>
-          <p>Diagnóstico en terreno, reparación de fallas eléctricas/mecánicas y recarga de refrigerante ecológico R410A o R32 con manómetro digital y prueba de fugas incluida.</p>
+          <p>Diagnóstico en terreno para equipos que no enfrían, gotean, hacen ruido o presentan fallas eléctricas.</p>
           <div class="benefit-grid">
             <article>
-              <h3>Diagnóstico en menos de 60 minutos</h3>
-              <p>Identificamos la falla y el costo antes de intervenir. Cotización clara por WhatsApp, sin letra chica.</p>
+              <h3>Diagnóstico claro</h3>
+              <p>Te explicamos la falla y el costo antes de reparar.</p>
             </article>
             <article>
-              <h3>Recarga R410A / R32 certificada</h3>
-              <p>Carga por peso según placa del fabricante, vacío previo y prueba de fugas con nitrógeno seco para estabilidad térmica durable.</p>
+              <h3>Recarga R410A / R32</h3>
+              <p>Revisamos fugas antes de realizar cualquier recarga.</p>
             </article>
             <article>
-              <h3>Urgencias en olas de calor</h3>
-              <p>Prioridad para hogares y comercios en Rancagua y alrededores cuando la temperatura supera 32 °C y el equipo no enfría.</p>
+              <h3>Atención en Rancagua</h3>
+              <p>Consulta disponibilidad directamente con el técnico.</p>
             </article>
           </div>
         </article>
@@ -1264,18 +1236,18 @@
         <div class="coverage-grid">
           <article class="coverage-card reveal">
             <h2>Aire Acondicionado en Machalí</h2>
-            <p>Instalaciones pensadas para el confort de tu hogar: unidades silenciosas, tuberías bien ocultas y terminaciones que respetan la estética de tu living o dormitorio. Cotiza sin compromiso.</p>
-            <a class="btn btn-outline" href="#" data-wa data-wa-msg="Hola ACC, quiero cotizar instalación de aire acondicionado en Machalí.">Cotizar Instalación por WhatsApp</a>
+            <p>Instalación, mantención y reparación a domicilio.</p>
+            <a class="btn btn-outline" href="#" data-wa data-wa-msg="Hola ACC, necesito servicio de aire acondicionado en Machalí.">Consultar por WhatsApp</a>
           </article>
           <article class="coverage-card reveal">
             <h2>Aire Acondicionado en Graneros</h2>
-            <p>Llegamos rápido a Graneros con equipos inverter de alto rendimiento frío/calor. Ideal si necesitas climatizar ya y bajar la cuenta de luz desde el primer mes.</p>
-            <a class="btn btn-outline" href="#" data-wa data-wa-msg="Hola ACC, quiero agendar visita técnica en Graneros.">Agendar Visita Técnica</a>
+            <p>Servicio técnico para equipos split e Inverter.</p>
+            <a class="btn btn-outline" href="#" data-wa data-wa-msg="Hola ACC, necesito servicio de aire acondicionado en Graneros.">Consultar por WhatsApp</a>
           </article>
           <article class="coverage-card reveal">
             <h2>Aire Acondicionado en Olivar</h2>
-            <p>Desplazamiento ágil a Olivar y equipos eficientes para frío intenso en verano y calor estable en invierno. Respuesta rápida por WhatsApp, sin esperas eternas.</p>
-            <a class="btn btn-outline" href="#" data-wa data-wa-msg="Hola ACC, quiero cotizar aire acondicionado en Olivar.">Cotizar Instalación por WhatsApp</a>
+            <p>Climatización frío/calor para hogares y comercios.</p>
+            <a class="btn btn-outline" href="#" data-wa data-wa-msg="Hola ACC, necesito servicio de aire acondicionado en Olivar.">Consultar por WhatsApp</a>
           </article>
         </div>
 
@@ -1292,27 +1264,27 @@
     <section class="trust cv-auto" id="proceso">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">Prueba social y garantía</span>
-          <h2>Técnicos SEC con garantía técnica escrita en la Región de O'Higgins</h2>
-          <p>ACC Climatización opera con instaladores de acreditación SEC vigente, refrigerantes ecológicos R410A / R32 y fijaciones antivibración de norma industrial. Cada servicio incluye garantía técnica documentada.</p>
+          <span class="eyebrow">Así trabajamos</span>
+          <h2>Atención técnica simple y transparente</h2>
+          <p>Hablas directamente con el técnico, recibes una cotización clara y coordinas la visita por WhatsApp.</p>
         </div>
         <ol class="steps reveal">
           <li>
             <div>
-              <strong>Contacto por WhatsApp (&lt;15 min)</strong>
-              <p>Indica comuna (Rancagua, Machalí, Graneros u Olivar), servicio y urgencia. Respuesta con disponibilidad real del día.</p>
+              <strong>Cuéntanos qué necesitas</strong>
+              <p>Envía tu comuna, tipo de servicio y, si puedes, una foto del equipo.</p>
             </div>
           </li>
           <li>
             <div>
-              <strong>Cotización técnica en 24 h</strong>
-              <p>Precio, plazo, alcance y tipo de refrigerante (R410A / R32) sin letra chica. Decides con datos duros.</p>
+              <strong>Recibe orientación</strong>
+              <p>Confirmamos disponibilidad y te indicamos el siguiente paso.</p>
             </div>
           </li>
           <li>
             <div>
-              <strong>Instalación o reparación certificada</strong>
-              <p>Técnico SEC en terreno, prueba de presión/temperatura, fijaciones antivibración y garantía técnica escrita al cierre.</p>
+              <strong>Agenda la visita</strong>
+              <p>Coordinamos día y horario para atenderte en terreno.</p>
             </div>
           </li>
         </ol>
@@ -1321,65 +1293,29 @@
 
     <section class="cta-band cv-auto">
       <div class="wrap reveal">
-        <h2>¿Sin clima y lo necesitas ya?</h2>
-        <p>Instaladores certificados en Rancagua y alrededores. Cotiza ahora y agenda tu visita técnica por WhatsApp.</p>
-        <a class="btn btn-primary" href="#" data-wa data-wa-msg="Hola ACC, quiero agendar una visita técnica.">Agendar Visita Técnica</a>
+        <h2>¿Tu equipo no está funcionando bien?</h2>
+        <p>Cuéntale el problema a un técnico y revisa la disponibilidad para tu comuna.</p>
+        <a class="btn btn-primary" href="#" data-wa data-wa-msg="Hola ACC, mi aire acondicionado no está funcionando bien. Estoy en:">Hablar con un técnico</a>
       </div>
     </section>
 
     <section class="lead cv-auto" id="cotizar">
       <div class="wrap lead-grid">
         <div class="lead-copy reveal">
-          <span class="eyebrow">Cotización sin fricción</span>
-          <h2>Agenda tu visita técnica por WhatsApp</h2>
-          <p>Completa el formulario o escribe directo. Un instalador certificado te responde con horarios disponibles en O'Higgins.</p>
-          <p style="margin-top:1.25rem">
-            <a class="btn btn-outline" href="#" data-wa id="cta-form-wa" data-wa-msg="Hola ACC, quiero cotizar instalación por WhatsApp.">Cotizar Instalación por WhatsApp</a>
-          </p>
+          <span class="eyebrow">Contacto directo</span>
+          <h2>Cotiza por WhatsApp con el técnico</h2>
+          <p>Elige el servicio y te dejamos el mensaje listo. Solo agrega tu comuna y una foto si corresponde.</p>
         </div>
-        <form class="lead-form reveal" id="lead-form" novalidate>
-          <div class="form-row two">
-            <div class="field">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" autocomplete="name" required maxlength="80" placeholder="Ej: María González" enterkeyhint="next">
-            </div>
-            <div class="field">
-              <label for="telefono">Teléfono / WhatsApp</label>
-              <input type="tel" id="telefono" name="telefono" autocomplete="tel" required maxlength="20" placeholder="+56 9 1234 5678" inputmode="tel" enterkeyhint="next">
-            </div>
+        <div class="contact-card reveal">
+          <h3>¿Qué servicio necesitas?</h3>
+          <p>Abre WhatsApp con una consulta preparada.</p>
+          <div class="contact-options">
+            <a class="btn btn-primary" href="#" data-wa data-wa-msg="Hola ACC, quiero cotizar una instalación de aire acondicionado. Mi comuna es:">Instalación</a>
+            <a class="btn btn-outline" href="#" data-wa data-wa-msg="Hola ACC, quiero cotizar una mantención de aire acondicionado. Mi comuna es:">Mantención</a>
+            <a class="btn btn-outline" href="#" data-wa data-wa-msg="Hola ACC, necesito reparar un aire acondicionado. Mi comuna es:">Reparación</a>
           </div>
-          <div class="form-row two">
-            <div class="field">
-              <label for="comuna">Comuna</label>
-              <select id="comuna" name="comuna" required autocomplete="address-level2" aria-required="true">
-                <option value="" disabled selected>Selecciona tu comuna</option>
-                <option value="Rancagua">Rancagua</option>
-                <option value="Machalí">Machalí</option>
-                <option value="Graneros">Graneros</option>
-                <option value="Olivar">Olivar</option>
-                <option value="Otra">Otra comuna O'Higgins</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="servicio">Servicio</label>
-              <select id="servicio" name="servicio" required autocomplete="off" aria-required="true">
-                <option value="" disabled selected>Selecciona el servicio</option>
-                <option value="Instalación de Equipos Inverter">Instalación de Equipos Inverter</option>
-                <option value="Mantención Preventiva">Mantención Preventiva</option>
-                <option value="Reparación y Recarga de Gas">Reparación y Recarga de Gas</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="field">
-              <label for="mensaje">Detalle (opcional)</label>
-              <textarea id="mensaje" name="mensaje" maxlength="500" autocomplete="off" placeholder="Ej: Inverter 12.000 BTU, living 25 m², refrigerante R32, urgencia esta semana…"></textarea>
-            </div>
-          </div>
-          <button class="btn btn-primary" type="submit" style="width:100%">Cotizar Instalación por WhatsApp</button>
-          <p class="form-note">Al enviar se abre WhatsApp con tu solicitud lista. Garantía técnica en la Región de O'Higgins.</p>
-          <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
-        </form>
+          <p class="contact-note">Sin formularios ni llamadas automáticas.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -1391,7 +1327,7 @@
           <span class="logo-mark">ACC</span>
           <span class="logo-sub">Climatización</span>
         </a>
-        <p>Instaladores certificados. Instalación, mantención y reparación de aire acondicionado en Rancagua, Machalí, Graneros y Olivar — con garantía técnica en la Región de O'Higgins.</p>
+        <p>Instalación, mantención y reparación de aire acondicionado en Rancagua, Machalí, Graneros y Olivar.</p>
       </div>
       <nav class="footer-nav" aria-label="Pie de página">
         <a href="#servicios">Servicios</a>
@@ -1409,7 +1345,7 @@
     <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
-    <span class="wa-label">Agendar Visita</span>
+    <span class="wa-label">Hablar por WhatsApp</span>
   </a>
 
   <script>
@@ -1485,45 +1421,6 @@
         for (var r = 0; r < reveals.length; r++) io.observe(reveals[r]);
       } else {
         for (var k = 0; k < reveals.length; k++) reveals[k].classList.add("is-in");
-      }
-
-      var form = document.getElementById("lead-form");
-      var feedback = document.getElementById("form-feedback");
-
-      function showFeedback(type, text) {
-        if (!feedback) return;
-        feedback.className = "form-feedback is-visible is-" + type;
-        feedback.textContent = text;
-      }
-
-      if (form) {
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          var nombre = (form.nombre.value || "").trim();
-          var telefono = (form.telefono.value || "").trim();
-          var comuna = form.comuna.value;
-          var servicio = form.servicio.value;
-          var mensaje = (form.mensaje.value || "").trim();
-
-          if (!nombre || !telefono || !comuna || !servicio) {
-            showFeedback("error", "Completa nombre, teléfono, comuna y servicio.");
-            return;
-          }
-
-          var lines = [
-            "Hola ACC, quiero cotizar:",
-            "• Nombre: " + nombre,
-            "• Teléfono: " + telefono,
-            "• Comuna: " + comuna,
-            "• Servicio: " + servicio
-          ];
-          if (mensaje) lines.push("• Detalle: " + mensaje);
-
-          var url = waUrl(lines.join("\n"));
-          showFeedback("success", "Abriendo WhatsApp con tu solicitud…");
-          window.open(url, "_blank", "noopener,noreferrer");
-        });
       }
 
       var yearEl = document.getElementById("year");
