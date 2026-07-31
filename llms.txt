@@ -1,28 +1,25 @@
-# ACC Climatización
+# Celius Climatización
 
-> Empresa de instalación, mantención y reparación de aire acondicionado Inverter en Rancagua y la Región de O'Higgins, Chile. Contacto directo por WhatsApp +56 9 2622 5041.
+> Portal local para solicitar instalación, mantención y reparación de aire acondicionado en Rancagua, Machalí, Graneros y Olivar, Región de O'Higgins, Chile.
 
-ACC Climatización (también conocida como ACC Rancagua o Celius) atiende hogares y comercios con técnicos especializados. Sitio oficial en español de Chile (es-CL).
+Celius Climatización conecta solicitudes de hogares, oficinas y pequeños comercios con atención técnica coordinada por WhatsApp. El teléfono de contacto es +56 9 2622 5041. La cobertura y agenda están sujetas a confirmación.
 
-## Páginas principales
+## Servicios
 
-- [Inicio — Aire acondicionado en Rancagua](https://www.celius.cl/): Página principal con servicios, cobertura y cotización por WhatsApp.
-- [Servicios](https://www.celius.cl/#servicios): Instalación Inverter, mantención preventiva y reparación / recarga de gas.
-- [Instalación de equipos Inverter](https://www.celius.cl/#instalacion): Montaje de splits Inverter con refrigerantes R410A / R32.
-- [Mantención preventiva](https://www.celius.cl/#mantencion): Limpieza y revisión de rendimiento a domicilio.
-- [Reparación y recarga de gas](https://www.celius.cl/#reparacion): Diagnóstico en terreno y recarga certificada R410A / R32.
-- [Cobertura local](https://www.celius.cl/#cobertura): Zonas de atención en Rancagua, Machalí, Graneros y Olivar.
-- [Cotizar por WhatsApp](https://www.celius.cl/#cotizar): Canal directo para hablar con el técnico.
+- [Instalación de aire acondicionado](https://www.celius.cl/instalacion-aire-acondicionado/): Dimensionamiento, ubicación, montaje, drenaje y puesta en marcha de equipos split e Inverter.
+- [Mantención de aire acondicionado](https://www.celius.cl/mantencion-aire-acondicionado/): Limpieza preventiva de filtros, evaporador, drenaje y unidad exterior.
+- [Reparación de aire acondicionado](https://www.celius.cl/reparacion-aire-acondicionado/): Diagnóstico de equipos que no enfrían, gotean, hacen ruido o presentan errores.
 
-## Contacto y cobertura
+## Cobertura
 
-- [WhatsApp ACC Climatización](https://wa.me/56926225041): Contacto oficial +56 9 2622 5041. Horario lunes a sábado, 09:00–19:00 (Chile).
-- [Aire acondicionado en Machalí](https://www.celius.cl/#cobertura): Instalación, mantención y reparación a domicilio en Machalí.
-- [Aire acondicionado en Graneros](https://www.celius.cl/#cobertura): Servicio técnico para equipos split e Inverter en Graneros.
-- [Aire acondicionado en Olivar](https://www.celius.cl/#cobertura): Climatización frío/calor para hogares y comercios en Olivar.
+- [Aire acondicionado en Rancagua](https://www.celius.cl/aire-acondicionado-rancagua/): Servicios para viviendas, oficinas y pequeños comercios.
+- [Aire acondicionado en Machalí](https://www.celius.cl/aire-acondicionado-machali/): Atención para casas, departamentos y comercios.
+- [Aire acondicionado en Graneros](https://www.celius.cl/aire-acondicionado-graneros/): Solicitudes residenciales y comerciales sujetas a disponibilidad.
+- [Aire acondicionado en Olivar](https://www.celius.cl/aire-acondicionado-olivar/): Cobertura evaluada según sector y acceso.
 
-## Optional
+## Contacto
 
-- [Mapa del sitio](https://www.celius.cl/sitemap.xml): URLs indexables del sitio.
-- [robots.txt](https://www.celius.cl/robots.txt): Directivas para crawlers.
-- [Imagen de cobertura O'Higgins](https://www.celius.cl/images/cobertura-ohiggins.jpg): Mapa visual de zonas de servicio.
+- [Inicio](https://www.celius.cl/): Directorio principal de servicios y comunas.
+- [WhatsApp](https://wa.me/56926225041): Contacto directo para cotizar indicando servicio y comuna.
+- [Sitemap](https://www.celius.cl/sitemap.xml): Mapa de páginas indexables.
+- [Robots](https://www.celius.cl/robots.txt): Directivas de rastreo.
