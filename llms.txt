@@ -1,8 +1,8 @@
 # Celius Climatización
 
-> Portal local para solicitar instalación, mantención y reparación de aire acondicionado en Rancagua, Machalí, Graneros y Olivar, Región de O'Higgins, Chile.
+> Técnicos de aire acondicionado en Rancagua, Machalí, Graneros y Olivar (Región de O'Higgins, Chile): instalación, mantención y reparación.
 
-Celius Climatización conecta solicitudes de hogares, oficinas y pequeños comercios con atención técnica coordinada por WhatsApp. El teléfono de contacto es +56 9 2622 5041. La cobertura y agenda están sujetas a confirmación.
+Celius Climatización es una empresa local de climatización que atiende hogares, oficinas y pequeños comercios. Cotización y coordinación directa por WhatsApp o teléfono +56 9 2622 5041. Técnicos con certificación SEC. La cobertura y agenda están sujetas a confirmación.
 
 ## Servicios
 
@@ -19,7 +19,8 @@ Celius Climatización conecta solicitudes de hogares, oficinas y pequeños comer
 
 ## Contacto
 
-- [Inicio](https://www.celius.cl/): Directorio principal de servicios y comunas.
+- [Inicio](https://www.celius.cl/): Página principal de servicios y cobertura comunal.
+- [Teléfono](tel:+56926225041): +56 9 2622 5041.
 - [WhatsApp](https://wa.me/56926225041): Contacto directo para cotizar indicando servicio y comuna.
 - [Sitemap](https://www.celius.cl/sitemap.xml): Mapa de páginas indexables.
 - [Robots](https://www.celius.cl/robots.txt): Directivas de rastreo.

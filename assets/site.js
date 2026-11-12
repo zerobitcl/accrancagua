@@ -4,9 +4,8 @@
   var WA_NUMBER = "56926225041";
   var DEFAULT_MESSAGE = "Hola Celius Climatización, necesito orientación para un aire acondicionado.";
 
-  // No inventar Measurement ID. Cuando lo tengas, descomenta y reemplaza:
-  // var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
-  var GA_MEASUREMENT_ID = "";
+  // GA4 — un solo lugar. Si GTM (GTM-PGPFPL8M) también dispara GA4 al mismo ID, quita uno para no duplicar pageviews.
+  var GA_MEASUREMENT_ID = "G-91S6S167R1";
 
   function pageSource() {
     return document.body.getAttribute("data-page") || window.location.pathname;
@@ -18,8 +17,12 @@
   }
 
   function trackEvent(name, params) {
-    if (typeof window.gtag !== "function") return;
-    window.gtag("event", name, params || {});
+    var payload = Object.assign({ event: name }, params || {});
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(payload);
+    if (typeof window.gtag === "function") {
+      window.gtag("event", name, params || {});
+    }
   }
 
   function initAnalytics() {

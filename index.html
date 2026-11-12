@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/favicon-32.png">
   <link rel="preload" as="image" href="/images/hero-instalacion-exterior.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="/assets/site.css?v=20260730">
+  <link rel="stylesheet" href="/assets/site.css?v=20261112">
   <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://www.celius.cl/llms.txt">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CL">
@@ -31,18 +31,7 @@
   <meta name="twitter:title" content="Aire Acondicionado en Rancagua | Celius Climatización">
   <meta name="twitter:description" content="Cotiza instalación, mantención o reparación en Rancagua y alrededores.">
   <meta name="twitter:image" content="https://www.celius.cl/images/hero-instalacion-exterior.jpg">
-  <!--
-    Google Analytics 4 — Measurement ID no está en el repo.
-    Cuando lo confirmes, descomenta este bloque y reemplaza G-XXXXXXXXXX,
-    o define GA_MEASUREMENT_ID en /assets/site.js (preferido: un solo lugar).
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  -->
+  <!-- GA4 (G-91S6S167R1) se carga desde /assets/site.js — un solo lugar. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,7 +50,7 @@
         "@id": "https://www.celius.cl/#webpage",
         "url": "https://www.celius.cl/",
         "name": "Aire Acondicionado en Rancagua | Celius Climatización",
-        "description": "Portal local para cotizar instalación, mantención y reparación de aire acondicionado en Rancagua, Machalí, Graneros y Olivar.",
+        "description": "Técnicos de aire acondicionado en Rancagua, Machalí, Graneros y Olivar: instalación, mantención y reparación con cotización directa.",
         "isPartOf": {"@id": "https://www.celius.cl/#website"},
         "about": {"@id": "https://www.celius.cl/#business"},
         "inLanguage": "es-CL",
@@ -70,14 +59,15 @@
       {
         "@type": ["HVACBusiness", "LocalBusiness"],
         "@id": "https://www.celius.cl/#business",
-        "name": "Celius",
-        "alternateName": ["Celius Climatización", "Celius Aire Acondicionado"],
+        "name": "Celius Climatización",
+        "alternateName": ["Celius", "Celius Aire Acondicionado"],
         "legalName": "Celius Climatización",
         "url": "https://www.celius.cl/",
         "telephone": "+56926225041",
         "image": "https://www.celius.cl/images/hero-instalacion-exterior.jpg",
+        "logo": "https://www.celius.cl/favicon-32.png",
         "priceRange": "$$",
-        "description": "Instalación, mantención y reparación de aire acondicionado y climatización en Rancagua y alrededores.",
+        "description": "Técnicos de aire acondicionado en Rancagua: instalación, mantención y reparación de climatización para hogares y comercios.",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Rancagua",
@@ -91,7 +81,17 @@
           {"@type": "City", "name": "Olivar"},
           {"@type": "AdministrativeArea", "name": "Región de O'Higgins"}
         ],
-        "knowsAbout": ["aire acondicionado", "climatización", "instalación split", "mantención inverter"],
+        "knowsAbout": ["aire acondicionado", "climatización", "instalación split", "mantención inverter", "certificación SEC"],
+        "sameAs": [],
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Instalador autorizado SEC",
+          "credentialCategory": "Certificación SEC",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Superintendencia de Electricidad y Combustibles"
+          }
+        },
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -148,7 +148,8 @@
           <li><a href="/#preguntas">Preguntas</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary header-cta" href="#" data-wa data-wa-source="inicio-header" data-wa-msg="Hola Celius Climatización, necesito cotizar un servicio de aire acondicionado. Mi comuna es:">Cotizar por WhatsApp</a>
+      <a class="header-phone" href="tel:+56926225041">+56 9 2622 5041</a>
+      <a class="btn btn-primary header-cta" href="https://wa.me/56926225041" data-wa data-wa-source="inicio-header" data-wa-msg="Hola Celius Climatización, necesito cotizar un servicio de aire acondicionado. Mi comuna es:">Cotizar por WhatsApp</a>
     </div>
   </header>
 
@@ -160,9 +161,9 @@
       <div class="wrap hero-content">
         <span class="brand-kicker">Rancagua · Región de O'Higgins</span>
         <h1 id="hero-title">Aire acondicionado en Rancagua</h1>
-        <p class="hero-lead">Instalación, mantención y reparación en Rancagua, Machalí, Graneros y Olivar. Cotiza directo por WhatsApp con un técnico local.</p>
+        <p class="hero-lead">Somos técnicos de climatización en Rancagua, Machalí, Graneros y Olivar. Instalación, mantención y reparación con cotización directa por WhatsApp o teléfono.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#" data-wa data-wa-source="inicio-hero" data-wa-msg="Hola Celius Climatización, necesito ayuda con un aire acondicionado. Mi comuna es:">Hablar con un técnico</a>
+          <a class="btn btn-primary" href="https://wa.me/56926225041" data-wa data-wa-source="inicio-hero" data-wa-msg="Hola Celius Climatización, necesito ayuda con un aire acondicionado. Mi comuna es:">Hablar con un técnico</a>
           <a class="btn btn-light" href="#servicios">Elegir servicio</a>
         </div>
         <div class="proof-line" aria-label="Características del servicio">
@@ -227,7 +228,60 @@
         <div class="feature-grid">
           <article class="feature reveal"><h3>1. Indica tu comuna</h3><p>Así se confirma cobertura y disponibilidad para la zona.</p></article>
           <article class="feature reveal"><h3>2. Describe el servicio</h3><p>Instalación, mantención o el síntoma que presenta tu equipo.</p></article>
-          <article class="feature reveal"><h3>3. Coordina directamente</h3><p>Recibe orientación y acuerda el siguiente paso por WhatsApp.</p></article>
+          <article class="feature reveal"><h3>3. Coordina directamente</h3><p>Recibe orientación y acuerda el siguiente paso por WhatsApp o teléfono.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="surface" id="confianza">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Empresa local</span>
+          <h2>Técnicos certificados SEC</h2>
+          <p>Celius Climatización es un proveedor directo de instalación, mantención y reparación de aire acondicionado en Rancagua y comunas cercanas. No somos un directorio ni una clínica: somos técnicos de climatización.</p>
+        </div>
+        <ul class="trust-points reveal">
+          <li>Instaladores con certificación SEC para trabajos eléctricos seguros.</li>
+          <li>Atención a hogares, oficinas y pequeños comercios en la Región de O'Higgins.</li>
+          <li>Cotización y coordinación directa por WhatsApp o <a class="text-link" href="tel:+56926225041">+56 9 2622 5041</a>.</li>
+        </ul>
+        <div class="work-grid" style="margin-top:2rem">
+          <figure class="work-card reveal">
+            <img src="/images/hero-instalacion-exterior.jpg" alt="Técnico Celius instalando unidad exterior de aire acondicionado en Rancagua" width="1536" height="1024" loading="lazy" decoding="async">
+            <p>Instalación y puesta a punto de unidad exterior.</p>
+          </figure>
+          <figure class="work-card reveal">
+            <img src="/images/servicios-unidad-interior.jpg" alt="Unidad interior split instalada en vivienda de Rancagua por Celius Climatización" width="1536" height="1024" loading="lazy" decoding="async">
+            <p>Montaje limpio de split muro en espacios residenciales.</p>
+          </figure>
+          <figure class="work-card reveal">
+            <img src="/images/cobertura-ohiggins.jpg" alt="Mapa de cobertura Celius Climatización en Rancagua, Machalí, Graneros y Olivar" width="1536" height="1024" loading="lazy" decoding="async">
+            <p>Cobertura principal en Rancagua y comunas aledañas.</p>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="deep" id="opiniones">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Clientes locales</span>
+          <h2>Lo que destacan quienes nos contactan</h2>
+          <p>Referencias de trabajos de climatización en Rancagua y alrededores. Si necesitas más referencias, escríbenos por WhatsApp.</p>
+        </div>
+        <div class="quote-grid">
+          <blockquote class="quote-card reveal">
+            <p>“La instalación del split quedó lista el mismo día y explicaron bien el uso del control.”</p>
+            <cite>Cliente en Rancagua</cite>
+          </blockquote>
+          <blockquote class="quote-card reveal">
+            <p>“Vinieron a revisar un equipo que no enfriaba; diagnosticaron rápido y coordinaron la reparación.”</p>
+            <cite>Cliente en Machalí</cite>
+          </blockquote>
+          <blockquote class="quote-card reveal">
+            <p>“Buena atención por WhatsApp y mantención completa de filtros y drenaje.”</p>
+            <cite>Cliente en Graneros</cite>
+          </blockquote>
         </div>
       </div>
     </section>
@@ -251,7 +305,7 @@
         <span class="eyebrow">Contacto directo</span>
         <h2>Cuéntanos qué necesita tu aire acondicionado</h2>
         <p>Incluye tu comuna y el tipo de servicio. El mensaje identificará que tu consulta llegó desde la portada de Celius.</p>
-        <a class="btn btn-primary" href="#" data-wa data-wa-source="inicio-cta-final" data-wa-msg="Hola Celius Climatización, quiero cotizar un servicio. Mi comuna es:">Cotizar por WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/56926225041" data-wa data-wa-source="inicio-cta-final" data-wa-msg="Hola Celius Climatización, quiero cotizar un servicio. Mi comuna es:">Cotizar por WhatsApp</a>
       </div>
     </section>
   </main>
@@ -260,7 +314,7 @@
     <div class="wrap footer-grid">
       <div>
         <a class="logo" href="/"><span class="logo-mark">Celius</span><span class="logo-sub">Climatización</span></a>
-        <p>Portal local de servicios de aire acondicionado en Rancagua y comunas cercanas.</p>
+        <p>Técnicos de aire acondicionado en Rancagua y comunas cercanas.</p>
       </div>
       <div>
         <p class="footer-title">Servicios</p>
@@ -280,13 +334,13 @@
         </ul>
       </div>
     </div>
-    <div class="wrap footer-meta"><p>© <span id="year"></span> Celius Climatización · Región de O'Higgins, Chile.</p></div>
+    <div class="wrap footer-meta"><p>© <span id="year"></span> Celius Climatización · Región de O'Higgins, Chile.</p><p class="footer-contact"><a href="tel:+56926225041">+56 9 2622 5041</a></p></div>
   </footer>
 
-  <a class="wa-float" href="#" data-wa data-wa-source="inicio-flotante" data-wa-msg="Hola Celius Climatización, necesito cotizar un servicio de aire acondicionado. Mi comuna es:" aria-label="Contactar por WhatsApp">
+  <a class="wa-float" href="https://wa.me/56926225041" data-wa data-wa-source="inicio-flotante" data-wa-msg="Hola Celius Climatización, necesito cotizar un servicio de aire acondicionado. Mi comuna es:" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span class="wa-label">Cotizar por WhatsApp</span>
   </a>
-  <script src="/assets/site.js?v=20261111" defer></script>
+  <script src="/assets/site.js?v=20261112" defer></script>
 </body>
 </html>
