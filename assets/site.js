@@ -11,6 +11,10 @@
     return document.body.getAttribute("data-page") || window.location.pathname;
   }
 
+  function pageLocation() {
+    return window.location.href;
+  }
+
   function whatsappUrl(message, source) {
     var leadMessage = (message || DEFAULT_MESSAGE) + "\n\nOrigen: " + (source || pageSource());
     return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(leadMessage);
@@ -22,6 +26,9 @@
     window.dataLayer.push(payload);
     if (typeof window.gtag === "function") {
       window.gtag("event", name, params || {});
+    }
+    if (typeof console !== "undefined" && console.debug) {
+      console.debug("[celius-analytics]", name, params || {});
     }
   }
 
@@ -56,8 +63,9 @@
         link.setAttribute("rel", "noopener noreferrer");
         link.addEventListener("click", function () {
           trackEvent("click_whatsapp", {
-            link_url: link.getAttribute("href") || "",
-            lead_source: link.getAttribute("data-wa-source") || pageSource()
+            wa_source: link.getAttribute("data-wa-source") || pageSource(),
+            page_location: pageLocation(),
+            link_url: link.getAttribute("href") || ""
           });
         });
       })(links[i]);
@@ -69,6 +77,7 @@
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener("click", function () {
         trackEvent("phone_click", {
+          page_location: pageLocation(),
           link_url: this.getAttribute("href") || "",
           lead_source: pageSource()
         });
@@ -84,8 +93,9 @@
       if (!link || link.hasAttribute("data-wa")) return;
       if (!isWhatsAppHref(link.getAttribute("href"))) return;
       trackEvent("click_whatsapp", {
-        link_url: link.getAttribute("href") || "",
-        lead_source: pageSource()
+        wa_source: pageSource(),
+        page_location: pageLocation(),
+        link_url: link.getAttribute("href") || ""
       });
     });
   }
@@ -97,7 +107,13 @@
         trackEvent("generate_lead", {
           method: "form",
           form_id: this.id || this.getAttribute("name") || "contact_form",
+          page_location: pageLocation(),
           lead_source: pageSource()
+        });
+        trackEvent("form_submit", {
+          method: "form",
+          form_id: this.id || this.getAttribute("name") || "contact_form",
+          page_location: pageLocation()
         });
       });
     }
