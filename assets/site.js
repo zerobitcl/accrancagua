@@ -62,10 +62,14 @@
         link.setAttribute("target", "_blank");
         link.setAttribute("rel", "noopener noreferrer");
         link.addEventListener("click", function () {
+          var liveMessage = link.getAttribute("data-wa-msg") || DEFAULT_MESSAGE;
+          var liveSource = link.getAttribute("data-wa-source") || pageSource();
+          var href = whatsappUrl(liveMessage, liveSource);
+          link.setAttribute("href", href);
           trackEvent("click_whatsapp", {
-            wa_source: link.getAttribute("data-wa-source") || pageSource(),
+            wa_source: liveSource,
             page_location: pageLocation(),
-            link_url: link.getAttribute("href") || ""
+            link_url: href
           });
         });
       })(links[i]);
@@ -97,6 +101,107 @@
         page_location: pageLocation(),
         link_url: link.getAttribute("href") || ""
       });
+    });
+  }
+
+  function bindGmb() {
+    var links = document.querySelectorAll("[data-gmb]");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function () {
+        trackEvent("click_gmb_profile", {
+          gmb_source: this.getAttribute("data-gmb-source") || pageSource(),
+          page_location: pageLocation(),
+          link_url: this.getAttribute("href") || ""
+        });
+      });
+    }
+  }
+
+  function initBtuCalculator() {
+    var form = document.getElementById("btu-form");
+    if (!form) return;
+
+    var m2Input = document.getElementById("btu-m2");
+    var wa = document.getElementById("btu-wa");
+    var lastKey = "";
+    // Orientación para el valle de Cachapoal, no un cálculo NCh ni Manual J.
+    // El poniente y el cielo alto pesan más porque el verano local supera los 33 °C.
+    var base = { dormitorio: 560, living: 680, oficina: 780 };
+    var solarFactor = { sombra: 0.86, normal: 1, sol: 1.3 };
+    var heightFactor = { estandar: 1, alta: 1.2 };
+    var roomLabel = { dormitorio: "Dormitorio", living: "Living-comedor", oficina: "Oficina o local" };
+    var solarLabel = {
+      sombra: "sombra u orientación sur",
+      normal: "exposición normal",
+      sol: "sol de poniente o bajo techumbre"
+    };
+    var heightLabel = { estandar: "cielo cercano a 2,4 m", alta: "cielo alto o doble altura" };
+
+    function snap(raw) {
+      if (raw <= 8500) return { label: "9.000 BTU", range: "9.000 BTU", code: "9000", note: "Alcanza para un dormitorio chico, sin sol directo de poniente." };
+      if (raw <= 11500) return { label: "12.000 BTU", range: "9.000 a 12.000 BTU", code: "12000", note: "Es el salto habitual cuando la pieza es amplia o hay más de una persona." };
+      if (raw <= 16500) return { label: "18.000 BTU", range: "12.000 a 18.000 BTU", code: "18000", note: "Cubre un living o estar familiar en el valle de Cachapoal." };
+      if (raw <= 23000) return { label: "24.000 BTU", range: "18.000 a 24.000 BTU", code: "24000", note: "Corresponde a un living grande, un local o un recinto con mucha carga solar." };
+      return { label: "Más de un equipo", range: "evaluación multisplit o comercial", code: "multi", note: "Un solo split muro se queda corto. Conviene repartir la carga en dos equipos o revisar un sistema mayor." };
+    }
+
+    function render() {
+      var m2 = parseFloat(String(m2Input.value).replace(",", "."));
+      var room = form.recinto.value;
+      var solar = form.exposicion.value;
+      var height = form.altura.value;
+      var comuna = form.comuna.value;
+      var equipo = form.equipo.value;
+      var figure = document.getElementById("btu-label");
+      var rawEl = document.getElementById("btu-raw");
+      var note = document.getElementById("btu-note");
+
+      if (!m2 || m2 < 6 || m2 > 180) {
+        figure.textContent = "Ingresa la superficie";
+        rawEl.textContent = "Usa entre 6 y 180 m². Es una orientación, no reemplaza la visita del técnico.";
+        note.textContent = "Con los metros, el uso del recinto y el sol, la calculadora propone una capacidad comercial Inverter frío/calor.";
+        wa.hidden = true;
+        return;
+      }
+
+      var raw = m2 * base[room] * solarFactor[solar] * heightFactor[height];
+      var rec = snap(raw);
+      var rounded = Math.round(raw / 100) * 100;
+      figure.textContent = rec.label;
+      rawEl.textContent = "Carga estimada: " + rounded.toLocaleString("es-CL") + " BTU";
+      note.textContent = rec.note + " Un Inverter frío/calor también calefacciona en invierno. La visita confirma drenaje, muro y punto eléctrico.";
+      var equipoTxt = equipo === "tengo"
+        ? "Ya tengo el equipo y quiero cotizar instalación o revisión."
+        : "Busco equipo e instalación.";
+      var msg = "Hola Celius Climatización, usé la calculadora BTU.\n"
+        + "Comuna: " + comuna + "\n"
+        + "Recinto: " + roomLabel[room] + ", " + String(m2).replace(".", ",") + " m², " + heightLabel[height] + ", " + solarLabel[solar] + ".\n"
+        + "Carga estimada: " + rounded.toLocaleString("es-CL") + " BTU.\n"
+        + "Recomendación: " + rec.range + " Inverter frío/calor.\n"
+        + equipoTxt + "\nQuiero cotizar.";
+      wa.setAttribute("data-wa-msg", msg);
+      wa.hidden = false;
+      wa.setAttribute("href", whatsappUrl(msg, "calculadora-btu"));
+
+      var key = rec.code + "|" + comuna + "|" + room + "|" + solar + "|" + height;
+      if (key === lastKey) return;
+      lastKey = key;
+      trackEvent("use_btu_calculator", {
+        btu_m2: m2,
+        btu_room: room,
+        btu_solar: solar,
+        btu_height: height,
+        btu_comuna: comuna,
+        btu_recommendation: rec.code,
+        page_location: pageLocation()
+      });
+    }
+
+    form.addEventListener("input", render);
+    form.addEventListener("change", render);
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      render();
     });
   }
 
@@ -166,5 +271,7 @@
   bindWhatsApp();
   bindWhatsAppFallbacks();
   bindPhoneClicks();
+  bindGmb();
   bindLeadForms();
+  initBtuCalculator();
 })();

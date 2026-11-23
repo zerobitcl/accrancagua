@@ -9,6 +9,7 @@ Celius Climatización es una empresa local de climatización que atiende hogares
 - [Instalación de aire acondicionado](https://www.celius.cl/instalacion-aire-acondicionado/): Dimensionamiento, ubicación, montaje, drenaje y puesta en marcha de equipos split e Inverter.
 - [Mantención de aire acondicionado](https://www.celius.cl/mantencion-aire-acondicionado/): Limpieza preventiva de filtros, evaporador, drenaje y unidad exterior.
 - [Reparación de aire acondicionado](https://www.celius.cl/reparacion-aire-acondicionado/): Diagnóstico de equipos que no enfrían, gotean, hacen ruido o presentan errores.
+- [Calculadora de BTU](https://www.celius.cl/calculadora-btu/): Estima si un recinto en Rancagua, Machalí, Graneros u Olivar necesita un split Inverter frío/calor de 9.000, 12.000, 18.000 o 24.000 BTU y deja la cotización lista para WhatsApp. Es una orientación, no reemplaza la visita técnica.
 
 ## Cobertura
 
@@ -20,6 +21,7 @@ Celius Climatización es una empresa local de climatización que atiende hogares
 ## Contacto
 
 - [Inicio](https://www.celius.cl/): Página principal de servicios y cobertura comunal.
+- [Perfil de Google](https://share.google/n70Rb0o22h0WcMHFc): Ficha de Celius Climatización, servicio a domicilio en Rancagua y comunas cercanas.
 - [Teléfono](tel:+56926225041): +56 9 2622 5041.
 - [WhatsApp](https://wa.me/56926225041): Contacto directo para cotizar indicando servicio y comuna.
 - [Sitemap](https://www.celius.cl/sitemap.xml): Mapa de páginas indexables.

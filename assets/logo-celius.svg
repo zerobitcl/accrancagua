@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" role="img" aria-label="Celius Climatización">
+  <rect x="0" y="8" width="48" height="48" rx="10" fill="#0B3D4A"/>
+  <rect x="9" y="21" width="30" height="11" rx="2.5" fill="#FFFFFF"/>
+  <rect x="12" y="24.2" width="15" height="2.4" rx="1.2" fill="#2EC4B6"/>
+  <circle cx="33.2" cy="25.4" r="1.5" fill="#75EADF"/>
+  <path d="M13 36.5c7 5.2 15 5.2 22 0" fill="none" stroke="#75EADF" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M16.5 41.5c5 3.6 10 3.6 15 0" fill="none" stroke="#2EC4B6" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="62" y="32" fill="#0B3D4A" font-family="Bahnschrift, Segoe UI, sans-serif" font-size="26" font-weight="700" letter-spacing="1.6">CELIUS</text>
+  <text x="62" y="50" fill="#13667A" font-family="Bahnschrift, Segoe UI, sans-serif" font-size="12" font-weight="700" letter-spacing="2.6">CLIMATIZACIÓN</text>
+</svg>
